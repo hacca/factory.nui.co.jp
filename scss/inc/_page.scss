@@ -59,6 +59,9 @@ __top
     z-index: 2;
     font-weight: bold;
     padding: 100px 0 70px 0;
+    span {
+        letter-spacing: 0em;
+    }
 }
 
 .p_top__thumbnail {
