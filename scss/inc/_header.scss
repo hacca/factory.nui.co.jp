@@ -1,0 +1,44 @@
+@charset "utf-8";
+@import "../config/_base_setting";
+@import "../config/_mixin";
+
+/*-----------------------------------------------
+ __header
+-----------------------------------------------*/
+
+.md_nav {
+    ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        li {
+            padding: 0 .5em;
+            a {
+                text-decoration: none;
+                color: $base_font__color;
+                display: inline-block;
+                box-sizing: border-box;
+                white-space: nowrap;
+                padding: .5em 1em;
+                transition: all .1s linear;
+                &:hover {
+                    background: $c2;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
