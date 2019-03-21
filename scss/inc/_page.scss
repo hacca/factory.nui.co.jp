@@ -40,7 +40,7 @@ __top
         background-image: url(../images/pTop_intro.jpg);
         background-size: auto 100%;
         background-repeat: no-repeat;
-        background-position: left bottom;
+        background-position: left top;
         z-index: -1;
         width: 65%;
         height: 100%;
@@ -58,7 +58,7 @@ __top
     line-height: 1.2;
     z-index: 2;
     font-weight: bold;
-    padding: 100px 0 70px 0;
+    padding: 70px 0 70px 0;
     span {
         letter-spacing: 0em;
     }
@@ -86,7 +86,7 @@ __top
     width: 30%;
     text-align: justify;
     line-height: 1.6;
-    padding-bottom: 100px;
+    padding-bottom: 120px;
     p {
         margin-bottom: .5em;
         &:last-child {
