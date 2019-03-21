@@ -12,6 +12,9 @@
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
+    &.mx_1440 {
+        max-width: 1440px;
+    }
     &.mx_1366 {
         max-width: 1366px;
     }

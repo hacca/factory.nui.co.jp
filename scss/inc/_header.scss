@@ -5,8 +5,22 @@
 /*-----------------------------------------------
  __header
 -----------------------------------------------*/
-
-.md_nav {
+.md_header {
+    padding-top: 80px;
+    background: #fff;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 20px;
+}
+.md_logo {
+    padding-bottom: 40px;
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+.md_glnav {
     ul {
         display: flex;
         flex-direction: row;
@@ -23,8 +37,10 @@
                 white-space: nowrap;
                 padding: .5em 1em;
                 transition: all .1s linear;
+                border-bottom: 2px solid transparent;
+                transition: all .2s linear;
                 &:hover {
-                    background: $c2;
+                    border-color: $base_font__color;
                 }
             }
         }

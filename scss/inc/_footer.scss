@@ -5,65 +5,39 @@
 /*-----------------------------------------------
  __footer
 -----------------------------------------------*/
-
 .md_footer {
-    background: #eee;
-    padding: 60px 0;
+    padding-top: 100px;
 }
-.md_footer__logo {
-    margin-bottom: 1em;
-    a {
-        text-decoration: none;
-        color: $base_font__color;
-        transition: all .1s linear;
-        &:hover {
-            color: $link_color;
-        }
-    }
-}
-
-.md_footer__nav {
+.md_ft__nav {
+    padding-bottom: 80px;
     ul {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: flex-start;
         li {
-            padding: 0 .5em;
-            position: relative;
-            &:first-child {
-                padding-left: 0;
-            }
-            &:last-child {
-                &:after {
-                    display: none;
-                }
-            }
-            &:after {
-                content: '';
-                position: absolute;
-                top: 50%;
-                right: 0;
-                height: calc(100% - .75em );
-                width: 1px;
-                background: #999;
-                transform: translateY(-50%);
-            }
-            a {
-                padding: 0 .5em;
-                text-decoration: none;
-                color: $base_font__color;
-                transition: all .1s linear;
-                @include media(480px) {
-                    font-size: 11px;
-                }
-                &:hover {
-                    color: $link_color;
-                }
+            flex: 0 1 30%;
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
             }
         }
     }
+    a {
+        text-decoration: none;
+        color: $base_font__color;
+    }
+}
+.md_ft__navTtl {
+    margin-top: 1.5em;
+    padding-top: .75em;
+    border-top: 2px solid #000;
 }
 
-
+.md_ft__info {
+    background: #000;
+    color: #eee;
+    padding: 60px 0;
+}
