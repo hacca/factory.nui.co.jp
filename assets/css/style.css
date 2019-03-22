@@ -816,10 +816,6 @@ __top
   padding: 70px 0 70px 0;
 }
 
-.p_top__copy span {
-  letter-spacing: 0em;
-}
-
 .p_top__thumbnail {
   position: relative;
 }
