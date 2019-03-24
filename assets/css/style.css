@@ -1314,6 +1314,93 @@ __manufacturing
   padding: 0 34% 40px 10%;
 }
 
+/*--------
+__contact
+-----------------------------------------------*/
+.p_contact__ttl {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.p_contact__ttl .icon {
+  display: block;
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+
+.p_contact__ttl .icon i {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.p_contact__tel {
+  text-align: center;
+}
+
+.p_contact__tel a {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #000;
+  text-decoration: none;
+  white-space: nowrap;
+  line-height: 1;
+  padding: .5em 2em;
+  color: #000;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.p_contact__detail {
+  margin-top: .5em;
+  text-align: center;
+}
+
+/*--------
+__recruit
+-----------------------------------------------*/
+.p_recruit__read {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.p_recruit__contents .image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.p_recruit__details {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+
+.p_recruit__details th {
+  width: 15em;
+  border-bottom: 1px solid #ddd;
+  padding: .5em 1em;
+}
+
+.p_recruit__details td {
+  border-bottom: 1px solid #ddd;
+  padding: .5em 1em;
+}
+
+.p_recruit__details .p_recruit__detailList {
+  list-style-type: disc;
+  padding-left: 1.5em;
+}
+
+.p_recruit__details .p_recruit__detailList li {
+  line-height: 1.5;
+  padding-bottom: .25em;
+}
+
+.p_recruit__details .p_recruit__detailList li:last-child {
+  padding-bottom: 0;
+}
+
 .sf_mb {
   font-family: "ゴシックMB101 B","Gothic MB101 Bold", sans-serif;
 }
