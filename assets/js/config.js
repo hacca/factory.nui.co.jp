@@ -19,6 +19,7 @@
             });
         }
 
+
         //スムーズスクロール
         $('a[href^="#"]').click(function(){
             var speed = 600;

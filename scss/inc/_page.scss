@@ -8,6 +8,18 @@ __common
 .pg_common {
 }
 
+.p_common__head {
+    padding: 80px 0;
+}
+.p_common__read {
+    text-align: center;
+    padding-top: 60px;
+}
+.p_common__headTtl {
+    text-align: center;
+}
+
+
 .md_thumbnail {
     display: flex;
     flex-direction: row;
@@ -23,6 +35,101 @@ __common
         }
     }
 }
+
+.md_column {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    .l_col {
+        flex: 0 1 50%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        &.between {
+            flex: 0 1 50%;
+        }
+        .innr {
+            padding-right: 8%;
+            padding-left: 8%;
+            &.left {
+                padding-left: 0;
+            }
+            &.center {
+                width: 100%;
+                text-align: center;
+                .center_wrap {
+                    display: inline-block;
+                    box-sizing: border-box;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+.md_column__img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.md_column__copy {
+    line-height: 1.5;
+    &.mb {
+        margin-bottom: 2em;
+    }
+}
+.md_column__name {
+    padding: 1em 0;
+    &:before {
+        content: '-';
+        padding-right: .5em;
+    }
+}
+.md_column__description {
+    text-align: justify;
+    line-height: 1.9;
+    p {
+        &.mb {
+            margin-bottom: 1.5em;
+        }
+    }
+}
+
+.md_column__ttl {
+    margin-bottom: 1.5em;
+    span {
+        text-decoration: none;
+        display: inline-block;
+        box-sizing: border-box;
+        white-space: nowrap;
+        line-height: 1;
+        padding : .5em 1em;
+        border: 2px solid #000;
+    }
+}
+.md_column__dirction {
+    div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: .25em 0;
+        dt {
+            width: 8em;
+            white-space: nowrap;
+        }
+        dd {
+            flex: 1 0 auto;
+            white-space: nowrap;
+        }
+    }
+}
+
 
 
 /*--------
@@ -96,7 +203,191 @@ __top
 }
 
 
+/*--------
+__about
+-----------------------------------------------*/
+.p_about__nav {
+    padding-bottom: 20px;
+}
+.p_about__navTriger {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    li {
+        flex: 0 1 50%;
+        cursor: pointer;
+        transition: all .1s linear;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 50%;
+            height: 2px;
+            background: #ddd;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50%;
+            height: 2px;
+            background: #ddd;
+        }
+        &:hover {
+            &:before {
+                animation: tab_ani .5s ease 1 normal forwards;
+            }
+            &:after {
+                animation: tab_ani2 .5s ease 1 normal forwards;
+            }
+        }
+        span {
+            padding: .5em 0;
+            display: inline-block;
+            box-sizing: border-box;
+            white-space: nowrap;
+            color: #ddd;
+        }
+        &.select {
+            &:before,&:after {
+                background: #000;
+            }
+            span {
+                color: #000;
+            }
+        }
+    }
+}
+.p_about__contents {
+    padding-top: 40px;
+    &.hide {
+        display: none;
+    }
+}
 
+@keyframes tab_ani {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 50%;
+    }
+}
+
+@keyframes tab_ani2 {
+    0% {
+        left: 50%;
+        width: 0;
+    }
+    100% {
+        width: 50%;
+    }
+}
+
+.p_about__mv {
+    height: 22vw;
+    background-image: url(../images/p_company01.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.p_about__head {
+    padding: 80px 0;
+    .ttl {
+        margin-bottom: 1em;
+    }
+}
+
+
+/*--------
+__manufacturing
+-----------------------------------------------*/
+.p_manufacturing {
+    padding-bottom: 150px;
+}
+.p_factory {
+    padding-top: 20px;
+    padding-bottom: 150px;
+    background: $c1;
+}
+.p_factory__contents {
+    li {
+        position: relative;
+        padding-bottom: 80px;
+        &:last-child {
+            padding-bottom: 0;
+        }
+        &.even {
+            .numbering {
+                left: auto;
+                right: 0;
+            }
+            .column_wrap {
+                margin-left: 0;
+                margin-right: auto;
+                .txt {
+                    padding-right: 10%;
+                    padding-left: 34%;
+                }
+            }
+        }
+    }
+    .numbering {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 2px solid #000;
+        width: 24%;
+        .wrap {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .num {
+            font-weight: bold;
+            font-size: 40px;
+            display: block;
+            line-height: 1;
+            white-space: nowrap;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        .ttl {
+            font-weight: bold;
+            font-size: 18px;
+            display: block;
+            line-height: 1;
+            white-space: nowrap;
+            text-align: center;
+        }
+        &:before {
+            content: '';
+            display: block;
+            padding-top: 100%;
+        }
+    }
+    .column_wrap {
+        width: 80%;
+        margin-left: auto;
+        .img {
+            img {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
+        .txt {
+            padding: 0 34% 40px 10%;
+        }
+    }
+}
 
 
 

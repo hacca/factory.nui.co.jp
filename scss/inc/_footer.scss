@@ -6,7 +6,7 @@
  __footer
 -----------------------------------------------*/
 .md_footer {
-    padding-top: 100px;
+    padding-top: 300px;
 }
 .md_ft__nav {
     padding-bottom: 80px;
@@ -22,12 +22,19 @@
                 max-width: 100%;
                 height: auto;
                 display: block;
+                filter: grayscale(100%);
+                transition: all .3s linear;
             }
         }
     }
     a {
         text-decoration: none;
         color: $base_font__color;
+        &:hover {
+            img {
+                filter: grayscale(0%);
+            }
+        }
     }
 }
 .md_ft__navTtl {
@@ -40,4 +47,45 @@
     background: #000;
     color: #eee;
     padding: 60px 0;
+}
+.md_ft__logo {}
+.md_ft__txnav {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    li {
+        white-space: nowrap;
+        padding: 0 .25em;
+        &:first-child {
+            padding-left: 0;
+        }
+        a {
+            padding: 0 .25em;
+            text-decoration: none;
+            color: #eee;
+            transition: all .1s linear;
+            &:hover {
+            }
+        }
+    }
+}
+.md_ft__contact {
+    margin-top: 1em;
+    a {
+        text-decoration: none;
+        display: inline-block;
+        box-sizing: border-box;
+        white-space: nowrap;
+        line-height: 1;
+        padding : .5em 1em;
+        color: #fff;
+        border: 1px solid #eee;
+        transition: all .1s linear;
+        &:hover {
+            background: #333;
+        }
+    }
 }
