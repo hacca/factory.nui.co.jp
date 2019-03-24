@@ -1144,6 +1144,15 @@ __common
           flex: 0 1 calc(100% / 3);
 }
 
+@media screen and (max-width: 540px) {
+  .md_thumbnail figure {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 90%;
+            flex: 0 1 90%;
+    margin-bottom: 10%;
+  }
+}
+
 .md_thumbnail figure img {
   max-width: 100%;
   height: auto;
@@ -1521,7 +1530,13 @@ __top
 @media screen and (max-width: 660px) {
   .p_top__read {
     width: 100%;
-    font-size: 12px;
+    padding: 2em 8%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .p_top__read {
+    font-size: 13px;
   }
 }
 

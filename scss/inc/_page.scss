@@ -52,6 +52,10 @@ __common
     align-items: center;
     figure {
         flex: 0 1 calc(100% / 3);
+        @include media(540px) {
+            flex: 0 1 90%;
+            margin-bottom: 10%;
+        }
         img {
             max-width: 100%;
             height: auto;
@@ -313,7 +317,10 @@ __top
     }
     @include media(660px) {
         width: 100%;
-        font-size: 12px;
+        padding: 2em 8%;
+    }
+    @include media(540px) {
+        font-size: 13px;
     }
     p {
         margin-bottom: .5em;
