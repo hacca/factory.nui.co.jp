@@ -10,16 +10,34 @@ __common
 
 .p_common__head {
     padding: 80px 0;
+
     @include media(768px) {
         padding: 40px 0;
     }
     @include media(540px) {
         padding: 30px 0;
     }
+    &.pd {
+        @include media(960px) {
+            padding-bottom: 0;
+        }
+    }
 }
 .p_common__read {
     text-align: center;
     padding-top: 60px;
+    @include media(540px) {
+        padding-top: 40px;
+        text-align: justify;
+        padding-right: 3%;
+        padding-left: 3%;
+        br {
+            display: none;
+        }
+        p {
+            margin-bottom: .5em;
+        }
+    }
 }
 .p_common__headTtl {
     text-align: center;
@@ -82,9 +100,9 @@ __common
             flex: 0 1 50%;
         }
         .innr {
-            padding-right: 8%;
             padding-left: 8%;
             &.left {
+                padding-right: 8%;
                 padding-left: 0;
                 @include media(960px) {
                     padding-left: 8%;
@@ -202,6 +220,16 @@ __top
 .p_top__intro {
     overflow: hidden;
     position: relative;
+    @include media(768px) {
+        margin-top: 20px;
+    }
+    @include media(660px) {
+        padding-top: 60px;
+        .pd_side {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
     &:after {
         content: '';
         position: absolute;
@@ -214,8 +242,13 @@ __top
         z-index: -1;
         width: 65%;
         height: 100%;
+        @include media(1100px) {
+            background-position: center top;
+        }
+        @include media(660px) {
+            background: none;
+        }
     }
-
     .innr {}
     .col {
         position: relative;
@@ -229,6 +262,21 @@ __top
     z-index: 2;
     font-weight: bold;
     padding: 70px 0 70px 0;
+    @include media(960px) {
+        font-size: 50px;
+        padding: 50px 0 50px 0;
+    }
+    @include media(768px) {
+        font-size: 40px;
+        white-space: nowrap;
+    }
+    @include media(660px) {
+        position: absolute;
+        font-size: 8vw;
+        padding: 0;
+        top: -50px;
+        left: 5%;
+    }
     span {
         // letter-spacing: 0em;
     }
@@ -246,6 +294,9 @@ __top
                 width: calc(100% / 3);
                 height: 200%;
                 background: #fff;
+                @include media(660px) {
+                    display: none;
+                }
             }
         }
     }
@@ -257,6 +308,13 @@ __top
     text-align: justify;
     line-height: 1.6;
     padding-bottom: 120px;
+    @include media(960px) {
+        padding-bottom: 60px;
+    }
+    @include media(660px) {
+        width: 100%;
+        font-size: 12px;
+    }
     p {
         margin-bottom: .5em;
         &:last-child {
@@ -264,7 +322,15 @@ __top
         }
     }
 }
-
+.p_top__introImg {
+    display: none;
+    @include media(660px) {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+}
 
 /*--------
 __about
@@ -413,16 +479,42 @@ __manufacturing
 -----------------------------------------------*/
 .p_manufacturing {
     padding-bottom: 150px;
+    @include media(768px) {
+        padding-bottom: 80px;
+    }
+    @include media(540px) {
+        padding-bottom: 60px;
+    }
 }
 .p_factory {
     padding-top: 20px;
     padding-bottom: 150px;
     background: $c1;
+    @include media(768px) {
+        padding-bottom: 80px;
+    }
+    @include media(540px) {
+        padding-bottom: 60px;
+    }
 }
 .p_factory__contents {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 5%;
+    @include media(960px) {
+        padding: 0 5%;
+    }
+    @include media(660px) {
+        padding-right: 0;
+        padding-left: 0;
+    }
     li {
         position: relative;
         padding-bottom: 80px;
+        @include media(660px) {
+            padding-bottom: 50px;
+            position: static;
+        }
         &:last-child {
             padding-bottom: 0;
         }
@@ -430,6 +522,9 @@ __manufacturing
             .numbering {
                 left: auto;
                 right: 0;
+                @include media(660px) {
+                    right: -8%;
+                }
             }
             .column_wrap {
                 margin-left: 0;
@@ -437,6 +532,22 @@ __manufacturing
                 .txt {
                     padding-right: 10%;
                     padding-left: 34%;
+                    @include media(960px) {
+                        padding-left: 0;
+                    }
+                    @include media(660px) {
+                        padding-right: 0%;
+                        padding-left: 10%;
+                        font-size: 12px;
+                    }
+                }
+                .img {
+                    img {
+                        @include media(660px) {
+                            margin-left: 0;
+                            margin-right: auto;
+                        }
+                    }
                 }
             }
         }
@@ -447,6 +558,14 @@ __manufacturing
         left: 0;
         border: 2px solid #000;
         width: 24%;
+        @include media(768px) {
+            width: 20%;
+        }
+        @include media(660px) {
+            left: -5%;
+            top: -10%;
+            width: 24%;
+        }
         .wrap {
             position: absolute;
             top: 50%;
@@ -461,6 +580,13 @@ __manufacturing
             white-space: nowrap;
             text-align: center;
             padding-bottom: 20px;
+            @include media(768px) {
+                font-size: 30px;
+                padding-bottom: 10px;
+            }
+            @include media(660px) {
+                font-size: 16px;
+            }
         }
         .ttl {
             font-weight: bold;
@@ -469,6 +595,12 @@ __manufacturing
             line-height: 1;
             white-space: nowrap;
             text-align: center;
+            @include media(768px) {
+                font-size: 15px;
+            }
+            @include media(540px) {
+                font-size: 10px;
+            }
         }
         &:before {
             content: '';
@@ -479,16 +611,38 @@ __manufacturing
     .column_wrap {
         width: 80%;
         margin-left: auto;
+        @include media(768px) {
+            width: 85%;
+        }
+        @include media(660px) {
+            width: 90%;
+        }
         .img {
+            @include media(660px) {
+                position: relative;
+            }
             img {
                 width: 100%;
                 max-width: 100%;
                 height: auto;
                 display: block;
+                @include media(660px) {
+                    width: 90%;
+                    margin-left: auto;
+                }
             }
         }
         .txt {
             padding: 0 34% 40px 10%;
+            @include media(960px) {
+                padding-right: 0;
+                padding-bottom: 30px;
+            }
+            @include media(660px) {
+                padding-left: 0%;
+                padding-right: 10%;
+                font-size: 12px;
+            }
         }
     }
 }
@@ -521,6 +675,9 @@ __contact
         color: #000;
         font-size: 30px;
         font-weight: bold;
+        @include media(540px) {
+            font-size: 20px;
+        }
     }
 }
 .p_contact__detail {
