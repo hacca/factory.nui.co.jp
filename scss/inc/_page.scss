@@ -10,6 +10,12 @@ __common
 
 .p_common__head {
     padding: 80px 0;
+    @include media(768px) {
+        padding: 40px 0;
+    }
+    @include media(540px) {
+        padding: 30px 0;
+    }
 }
 .p_common__read {
     text-align: center;
@@ -49,6 +55,29 @@ __common
         flex-wrap: wrap;
         justify-content: center;
         align-items: flex-start;
+        @include media(960px) {
+            flex: 0 1 100%;
+            figure {
+                padding: 8%;
+                @include media(540px) {
+                    padding-right: 3%;
+                    padding-left: 3%;
+                }
+            }
+        }
+        &.txt {
+            .innr {
+                @include media(540px) {
+                    padding-right: 3%;
+                    padding-left: 3%;
+                }
+            }
+        }
+        &.ordr2 {
+            @include media(960px) {
+                order: 2;
+            }
+        }
         &.between {
             flex: 0 1 50%;
         }
@@ -57,10 +86,20 @@ __common
             padding-left: 8%;
             &.left {
                 padding-left: 0;
+                @include media(960px) {
+                    padding-left: 8%;
+                }
+                @include media(540px) {
+                    padding-right: 3%;
+                    padding-left: 3%;
+                }
             }
             &.center {
                 width: 100%;
                 text-align: center;
+                @include media(960px) {
+                    text-align: left;
+                }
                 .center_wrap {
                     display: inline-block;
                     box-sizing: border-box;
@@ -78,6 +117,21 @@ __common
 }
 .md_column__copy {
     line-height: 1.5;
+    @include media(1200px) {
+        font-size: 2.5vw;
+    }
+    @include media(960px) {
+        font-size: 36px;
+    }
+    @include media(768px) {
+        font-size: 30px;
+    }
+    @include media(660px) {
+        font-size: 24px;
+    }
+    @include media(540px) {
+        font-size: 5.9vw;
+    }
     &.mb {
         margin-bottom: 2em;
     }
@@ -92,6 +146,16 @@ __common
 .md_column__description {
     text-align: justify;
     line-height: 1.9;
+    @include media(1200px) {
+        font-size: 1.35vw;
+        line-height: 1.75;
+    }
+    @include media(960px) {
+        font-size: 16px;
+    }
+    @include media(768px) {
+        font-size: 14px;
+    }
     p {
         &.mb {
             margin-bottom: 1.5em;
@@ -124,8 +188,7 @@ __common
             white-space: nowrap;
         }
         dd {
-            flex: 1 0 auto;
-            white-space: nowrap;
+            flex: 1;
         }
     }
 }
@@ -265,6 +328,14 @@ __about
 }
 .p_about__contents {
     padding-top: 40px;
+    &.about {
+        @include media(960px) {
+            padding-top: 0;
+        }
+    }
+    &.company {
+        padding-top: 8%;
+    }
     &.hide {
         display: none;
     }
@@ -295,11 +366,44 @@ __about
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    @include media(1200px) {
+        height: 30vw;
+    }
+    @include media(960px) {
+        height: 50vw;
+        width: 84%;
+        margin: 0 auto;
+        margin-bottom: 8%;
+    }
+    @include media(540px) {
+        width: 94%;
+    }
 }
 .p_about__head {
     padding: 80px 0;
+    @include media(960px) {
+        padding: 0;
+    }
     .ttl {
         margin-bottom: 1em;
+        @include media(960px) {
+            padding-right: 8%;
+            padding-left: 8%;
+        }
+        @include media(540px) {
+            padding-right: 3%;
+            padding-left: 3%;
+        }
+    }
+    .summary {
+        @include media(960px) {
+            padding-right: 8%;
+            padding-left: 8%;
+        }
+        @include media(540px) {
+            padding-right: 3%;
+            padding-left: 3%;
+        }
     }
 }
 
@@ -444,14 +548,32 @@ __recruit
     max-width: 800px;
     margin: 0 auto;
     padding-top: 80px;
+    @include media(768px) {
+        padding-top: 40px;
+    }
     th {
         width: 15em;
         border-bottom: 1px solid #ddd;
         padding: .5em 1em;
+        line-height: 1.4;
+        @include media(768px) {
+            font-size: 13px;
+            width: 10em;
+        }
+        @include media(540px) {
+            font-size: 12px;
+        }
     }
     td {
         border-bottom: 1px solid #ddd;
         padding: .5em 1em;
+        line-height: 1.4;
+        @include media(768px) {
+            font-size: 13px;
+        }
+        @include media(540px) {
+            font-size: 12px;
+        }
     }
     .p_recruit__detailList {
         list-style-type: disc;

@@ -9,16 +9,19 @@
         //     AOS.init();
         // });
 
-
-
         //ナビ
-        if($('#fn_guest__triger').length){
-            $('#fn_guest__triger').on("click", function () {
-                $(this).toggleClass('open');
-                $('#pg_guiness__guestWrap').toggleClass('active');
-            });
-        }
-
+        $('#btn-modal').on('click', function(){
+            $('#overlay').fadeIn();
+            $('#modal').fadeIn();
+        });
+        $('#close-btn').on('click', function(){
+            $('#overlay').fadeOut();
+            $('#modal').fadeOut();
+        });
+        $('#overlay').on('click', function(){
+            $('#overlay').fadeOut();
+            $('#modal').fadeOut();
+        });
 
         //スムーズスクロール
         $('a[href^="#"]').click(function(){

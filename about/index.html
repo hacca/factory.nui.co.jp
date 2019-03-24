@@ -10,6 +10,7 @@
     <script type="text/javascript"src="//webfonts.sakura.ne.jp/js/sakura.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
     <link rel="stylesheet" media="all" href="/assets/css/default.css" />
     <link rel="stylesheet" media="all" href="/assets/css/style.css?201903241328" />
     <link rel="shortcut icon" href="/assets/images/favicon.ico" />
@@ -34,7 +35,7 @@
                     <a href="/"><img src="/assets/images/logo.svg" alt="上野山縫工所" width="240"></a>
                 </h1>
                 <nav class="fz_18 fw700 md_glnav">
-                    <ul class="">
+                    <ul>
                         <li><a href="/about/">私たちについて</a></li>
                         <li><a href="/manufacturing/">ものづくり</a></li>
                         <li><a href="/manufacturing/?id=factory">縫製工場</a></li>
@@ -43,6 +44,9 @@
                         <li><a href="/contact/">お問い合わせ</a></li>
                     </ul>
                 </nav>
+                <div class="md_glnav__triger" id="btn-modal">
+                    <span class="">MENU</span>
+                </div>
             </header>
         </div>
 
@@ -62,12 +66,12 @@
                         </ul>
                     </nav>
 
-                    <section class="p_about__contents">
+                    <section class="p_about__contents about">
                         <article class="md_column">
                             <div class="l_col">
                                 <figure><img src="/assets/images/p_about02.jpg" alt="工場長　上野山 貴晴" class="md_column__img"></figure>
                             </div>
-                            <div class="l_col">
+                            <div class="l_col txt">
                                 <div class="innr">
                                     <h3 class="sf_mb fz_30 fw700 palt md_column__copy">死ぬまで<br>MADE IN JAPANでいきたい<br>残りの人生も、<br>この業界で挑戦し続ける。</h3>
                                     <h4 class="fz_18 md_column__name">工場長　上野山 貴晴</h4>
@@ -79,14 +83,14 @@
                             </div>
                         </article>
                         <article class="md_column">
-                            <div class="l_col">
+                            <div class="l_col ordr2 txt">
                                 <div class="innr left">
                                     <h3 class="sf_mb fz_30 fw700 palt md_column__copy">様々な出会いで、今がある<br>過去の知見を<br>未来へと紡いでいきたい</h3>
                                     <h4 class="fz_18 md_column__name">代表取締役社長　上野山 準</h4>
-
-                                    <p class="fz_15 palt md_column__description">
+                                    <div class="fz_15 palt md_column__description">
                                         <p>昭和49年、26歳で業界に入ってから片時も離れずに縫製に携わってきました。初めは小さな家庭内下請として開業し、そこから本当に様々な出会いがありました。</p>
                                         <p>厳しい時期もありましたが、当社を信頼してくださる周りの方々に支えられ、縫工所を営み続けることができています。人生も、仕事も、出会いが大事です。出会いに恵まれ、その中で培ってきた技術や経験を、次世代にも受け継いでいってもらいたいと思っています。</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="l_col">
@@ -95,7 +99,7 @@
                         </article>
                     </section>
 
-                    <section class="p_about__contents">
+                    <section class="p_about__contents company">
                         <figure class="p_about__mv"></figure>
                         <div class="p_about__head">
                             <h3 class="fz_18 fw700 ttl">暖かく、水が綺麗な有田地域に根ざしています</h3>
@@ -118,8 +122,8 @@
                                             <div><dt>設　立</dt><dd>昭和55年</dd></div>
                                             <div><dt>従業員数</dt><dd>18名(内社員13名）</dd></div>
                                             <div><dt>所在地</dt><dd>和歌山県有田市辻堂697</dd></div>
-                                            <div><dt>電話番号</dt><dd>07-3782-6336</dd></div>
-                                            <div><dt>FAX番号</dt><dd>07-3782-4472</dd></div>
+                                            <div><dt>電話番号</dt><dd>0737-82-6336</dd></div>
+                                            <div><dt>FAX番号</dt><dd>0737-82-4472</dd></div>
                                             <div><dt>MAIL</dt><dd>uenoyama@pandagon.jp</dd></div>
                                         </dl>
                                     </div>
@@ -127,7 +131,7 @@
                             </div>
                         </article>
                         <article class="md_column">
-                            <div class="l_col">
+                            <div class="l_col ordr2">
                                 <div class="innr center">
                                     <div class="center_wrap">
                                         <h3 class="fz_16 fw700 md_column__ttl"><span>歴史・沿革</span></h3>
@@ -145,6 +149,7 @@
                             </div>
                         </article>
                     </section>
+
                 </div>
             </div>
 
@@ -193,6 +198,26 @@
         </div><!-- /md_footer -->
 
     </div><!-- wrap -->
+
+    <div class="overlay" id="overlay"></div>
+    <div class="modal" id="modal">
+        <div class="innr">
+            <ul class="md_modal__nav">
+                <li><a href="/about/">私たちについて</a></li>
+                <li><a href="/manufacturing/">ものづくり</a></li>
+                <li><a href="/manufacturing/?id=factory">縫製工場</a></li>
+                <li><a href="/about/#tab2">会社概要</a></li>
+                <li><a href="/recruit/">採用情報</a></li>
+                <li><a href="/contact/">お問い合わせ</a></li>
+            </ul>
+            <div class="md_modal__info">
+                <h2 class="md_modal__logo"><a href=""><img src="/assets/images/logo.svg" alt="上野山縫工所" width="120"></a></h2>
+                <div class="fz_12 address">和歌山県有田市辻堂697</div>
+                <div class="tel">0737-82-6336</div>
+            </div>
+            <div class="md_modal__close" id="close-btn"><span></span><span></span></div>
+        </div>
+    </div>
 
     <script src="/assets/js/config.js"></script>
     <script>

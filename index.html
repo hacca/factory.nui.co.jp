@@ -10,6 +10,7 @@
     <script type="text/javascript"src="//webfonts.sakura.ne.jp/js/sakura.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
     <link rel="stylesheet" media="all" href="/assets/css/default.css" />
     <link rel="stylesheet" media="all" href="/assets/css/style.css?201903221924" />
     <link rel="shortcut icon" href="/assets/images/favicon.ico" />
@@ -34,7 +35,7 @@
                     <a href="/"><img src="/assets/images/logo.svg" alt="上野山縫工所" width="240"></a>
                 </h1>
                 <nav class="fz_18 fw700 md_glnav">
-                    <ul class="">
+                    <ul>
                         <li><a href="/about/">私たちについて</a></li>
                         <li><a href="/manufacturing/">ものづくり</a></li>
                         <li><a href="/manufacturing/?id=factory">縫製工場</a></li>
@@ -43,6 +44,9 @@
                         <li><a href="/contact/">お問い合わせ</a></li>
                     </ul>
                 </nav>
+                <div class="md_glnav__triger" id="btn-modal">
+                    <span class="">MENU</span>
+                </div>
             </header>
         </div>
 
@@ -112,6 +116,26 @@
         </div><!-- /md_footer -->
 
     </div><!-- wrap -->
+
+    <div class="overlay" id="overlay"></div>
+    <div class="modal" id="modal">
+        <div class="innr">
+            <ul class="md_modal__nav">
+                <li><a href="/about/">私たちについて</a></li>
+                <li><a href="/manufacturing/">ものづくり</a></li>
+                <li><a href="/manufacturing/?id=factory">縫製工場</a></li>
+                <li><a href="/about/#tab2">会社概要</a></li>
+                <li><a href="/recruit/">採用情報</a></li>
+                <li><a href="/contact/">お問い合わせ</a></li>
+            </ul>
+            <div class="md_modal__info">
+                <h2 class="md_modal__logo"><a href=""><img src="/assets/images/logo.svg" alt="上野山縫工所" width="120"></a></h2>
+                <div class="fz_12 address">和歌山県有田市辻堂697</div>
+                <div class="tel">0737-82-6336</div>
+            </div>
+            <div class="md_modal__close" id="close-btn"><span></span><span></span></div>
+        </div>
+    </div>
 
     <script src="/assets/js/config.js"></script>
 

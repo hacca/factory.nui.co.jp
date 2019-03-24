@@ -7,9 +7,15 @@
 -----------------------------------------------*/
 .md_footer {
     padding-top: 300px;
+    @include media(768px) {
+        padding-top: 100px;
+    }
 }
 .md_ft__nav {
     padding-bottom: 80px;
+    @include media(768px) {
+        padding-bottom: 40px;
+    }
     ul {
         display: flex;
         flex-direction: row;
@@ -41,6 +47,11 @@
     margin-top: 1.5em;
     padding-top: .75em;
     border-top: 2px solid #000;
+    @include media(660px) {
+        font-size: 12px;
+        margin-top: .75em;
+        padding-top: .25em;
+    }
 }
 
 .md_ft__info {
@@ -48,7 +59,19 @@
     color: #eee;
     padding: 60px 0;
 }
-.md_ft__logo {}
+.md_ft__logo {
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        @include media(768px) {
+            width: 160px;
+        }
+        @include media(660px) {
+            width: 120px;
+        }
+    }
+}
 .md_ft__txnav {
     padding-top: 20px;
     display: flex;
@@ -56,6 +79,9 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
+    @include media(540px) {
+        font-size: 11px;
+    }
     li {
         white-space: nowrap;
         padding: 0 .25em;
