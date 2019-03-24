@@ -950,7 +950,7 @@ __common
 }
 
 .md_column__name:before {
-  content: '-';
+  content: 'ー';
   padding-right: .5em;
 }
 
